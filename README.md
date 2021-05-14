@@ -2,22 +2,6 @@
 
 Protobuf IDL for Pinpoint
 
-## Generating code
-### Java
-```java
-./mvnw install
-```
-
-### Golang
-```go
-
-```
-
-### C
-```c
-
-```
-
 
 
 ## License
