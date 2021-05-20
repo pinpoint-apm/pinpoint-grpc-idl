@@ -1,5 +1,6 @@
 syntax = "proto3";
 
+import "google/protobuf/empty.proto";
 import "v1/ThreadDump.proto";
 
 option java_multiple_files = true;
