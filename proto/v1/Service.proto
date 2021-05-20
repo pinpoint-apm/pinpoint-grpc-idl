@@ -3,7 +3,6 @@ syntax = "proto3";
 import "google/protobuf/empty.proto";
 import "v1/Span.proto";
 import "v1/Stat.proto";
-import "v1/ThreadDump.proto";
 import "v1/Cmd.proto";
 
 option java_multiple_files = true;
