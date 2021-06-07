@@ -8,7 +8,7 @@ import "v1/Cmd.proto";
 option java_multiple_files = true;
 option java_package = "com.navercorp.pinpoint.grpc.trace";
 option java_outer_classname = "ServiceProto";
-//option objc_class_prefix = "PIN";
+option go_package = "/v1";
 
 package v1;
 
