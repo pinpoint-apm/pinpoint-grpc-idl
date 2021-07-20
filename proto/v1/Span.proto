@@ -144,7 +144,6 @@ message PApiMetaData {
     string apiInfo = 2;
     int32 line = 3;
     int32 type = 4;
-    string location = 5;
 }
 
 message PStringMetaData {
