@@ -18,6 +18,8 @@ enum PCommandType {
 
     ECHO = 710;
 
+    SAMPLING_RATE = 715;
+
     ACTIVE_THREAD_COUNT = 730;
     ACTIVE_THREAD_DUMP = 740;
     ACTIVE_THREAD_LIGHT_DUMP = 750;
@@ -52,6 +54,7 @@ message PCmdRequest {
 
     oneof command {
         PCmdEcho commandEcho = 710;
+        PCmdSamplingRate commandSamplingRate = 715;
         PCmdActiveThreadCount commandActiveThreadCount = 730;
         PCmdActiveThreadDump commandActiveThreadDump = 740;
         PCmdActiveThreadLightDump commandActiveThreadLightDump = 750;
@@ -65,6 +68,15 @@ message PCmdEcho {
 message PCmdEchoResponse {
     PCmdResponse commonResponse = 1;
     string message = 2;
+}
+
+message PCmdSamplingRate {
+    int32 samplingRate = 1;
+}
+
+message PCmdSamplingRateResponse {
+    PCmdResponse commonResponse = 1;
+    int32 samplingRate = 2;
 }
 
 message PCmdActiveThreadDump {
