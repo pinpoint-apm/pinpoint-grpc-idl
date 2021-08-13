@@ -71,12 +71,12 @@ message PCmdEchoResponse {
 }
 
 message PCmdSamplingRate {
-    int32 samplingRate = 1;
+    double samplingRate = 1;
 }
 
 message PCmdSamplingRateResponse {
     PCmdResponse commonResponse = 1;
-    int32 samplingRate = 2;
+    double samplingRate = 2;
 }
 
 message PCmdActiveThreadDump {
