@@ -31,6 +31,8 @@ service Metadata {
     }
     rpc RequestStringMetaData (PStringMetaData) returns (PResult) {
     }
+    rpc RequestExceptionMetaData (PExceptionMetaData) returns (PResult) {
+    }
 }
 
 service Stat {
