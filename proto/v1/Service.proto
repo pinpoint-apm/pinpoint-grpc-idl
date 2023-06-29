@@ -27,6 +27,8 @@ service Agent {
 service Metadata {
     rpc RequestSqlMetaData (PSqlMetaData) returns (PResult) {
     }
+    rpc RequestSqlUidMetaData (PSqlUidMetaData) returns (PResult) {
+    }
     rpc RequestApiMetaData (PApiMetaData) returns (PResult) {
     }
     rpc RequestStringMetaData (PStringMetaData) returns (PResult) {
