@@ -136,7 +136,11 @@ message PResult {
 message PSqlMetaData {
     int32 sqlId = 1;
     string sql = 2;
-    bytes sqlUid = 3;
+}
+
+message PSqlUidMetaData {
+    bytes sqlUid = 1;
+    string sql = 2;
 }
 
 message PApiMetaData {
