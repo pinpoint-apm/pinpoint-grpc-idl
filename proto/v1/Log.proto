@@ -1,0 +1,25 @@
+syntax = "proto3";
+package com.navercorp.pinpoint;
+
+option java_multiple_files = true;
+option java_package = "com.navercorp.pinpoint.grpc.log";
+option java_outer_classname = "LogProto";
+option go_package = "oss.navercorp.com/pinpoint/telegraf-output-pinpoint/protobuf";
+
+service Log {
+  rpc Connect (stream PLogPile) returns (stream PLogDemand) {}
+}
+
+message PLogPile {
+  int64 seq = 1;
+  repeated PLogRecord records = 2;
+}
+
+message PLogRecord {
+  int64 seq = 1;
+  string message = 2;
+}
+
+message PLogDemand {
+  int64 durationMillis = 1;
+}
