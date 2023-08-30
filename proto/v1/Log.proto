@@ -17,7 +17,8 @@ message PLogPile {
 
 message PLogRecord {
   int64 seq = 1;
-  string message = 2;
+  int64 timestamp = 2;
+  string message = 3;
 }
 
 message PLogDemand {
