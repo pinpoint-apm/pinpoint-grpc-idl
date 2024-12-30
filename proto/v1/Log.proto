@@ -4,7 +4,6 @@ package v1;
 option java_multiple_files = true;
 option java_package = "com.navercorp.pinpoint.grpc.log";
 option java_outer_classname = "LogProto";
-option go_package = "oss.navercorp.com/pinpoint/telegraf-output-pinpoint/protobuf";
 
 service Log {
   rpc Connect (stream PLogPile) returns (stream PLogDemand) {}
