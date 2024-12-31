@@ -62,4 +62,7 @@ service ProfilerCommandService {
 
     rpc CommandActiveThreadLightDump (PCmdActiveThreadLightDumpRes) returns (google.protobuf.Empty) {
     }
+
+    rpc CommandSamplingRate (PCmdSamplingRateResponse) returns (google.protobuf.Empty) {
+    }
 }
