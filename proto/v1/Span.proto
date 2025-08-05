@@ -65,6 +65,7 @@ message PParentInfo {
     string parentApplicationName = 1;
     int32 parentApplicationType = 2;
     string acceptorHost = 3;
+    string parentServiceName = 4;
 }
 
 message PLocalAsyncId {
