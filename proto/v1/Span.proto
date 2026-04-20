@@ -45,6 +45,8 @@ message PSpan {
 
     int32 applicationServiceType = 15;
     int32 loggingTransactionInfo = 16;
+
+    repeated PAttribute attribute = 17;
 }
 
 message PTransactionId {
@@ -90,6 +92,8 @@ message PSpanEvent {
 
     PNextEvent nextEvent = 12;
     int32 asyncEvent = 13;
+
+    repeated PAttribute attribute = 14;
 }
 
 message PNextEvent {
@@ -179,4 +183,29 @@ message PStackTraceElement {
     string fileName = 2;
     int32 lineNumber = 3;
     string methodName = 4;
+}
+
+message PAttributeValue {
+    oneof field {
+        string stringValue = 1;
+        bool boolValue = 2;
+        int64 intValue = 3;
+        double doubleValue = 4;
+        bytes binaryValue = 5;
+        PAttributeArrayValue arrayValue = 6;
+        PAttributeKeyValueList kvlistValue = 7;
+    }
+}
+
+message PAttributeArrayValue {
+    repeated PAttributeValue values = 1;
+}
+
+message PAttributeKeyValueList {
+    repeated PAttribute values = 1;
+}
+
+message PAttribute {
+    string key = 1;
+    PAttributeValue value = 2;
 }
