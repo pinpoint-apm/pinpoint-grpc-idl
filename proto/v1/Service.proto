@@ -14,6 +14,11 @@ package v1;
 
 service Span {
     rpc SendSpan (stream PSpanMessage) returns (google.protobuf.Empty) {
+        option deprecated = true;
+    }
+
+    // Supported since 3.1.0
+    rpc SendSpanBatch(PSpanMessageBatch) returns (PSpanResultBatch) {
     }
 }
 

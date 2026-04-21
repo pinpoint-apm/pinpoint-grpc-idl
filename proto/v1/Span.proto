@@ -17,6 +17,25 @@ message PSpanMessage {
     }
 }
 
+// Supported since 3.1.0
+message PSpanMessageBatch {
+    repeated PSpanMessage span = 1;
+}
+
+// Supported since 3.1.0
+message PSpanResultBatch {
+    PPartialSuccess partial_success = 1;
+}
+
+// Supported since 3.1.0
+message PPartialSuccess {
+    int64 rejected_spans = 1;
+
+    int64 errorId = 2;
+    string error_message = 3;
+
+}
+
 message PSpan {
     int32 version = 1;
 
